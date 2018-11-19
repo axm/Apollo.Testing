@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Moq;
 using Moq.AutoMock;
 
-namespace Apollo.Testing
+namespace Axm.Apollo.Testing
 {
     public abstract class BaseTestFixture
     {

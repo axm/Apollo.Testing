@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "src\Apollo.Testing", "src\Apollo.Testing\Apollo.Testing.csproj", "{CF536416-E1FF-4514-A05C-1473BBAF51C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "src\Axm.Apollo.Testing", "src\Axm.Apollo.Testing\Axm.Apollo.Testing.csproj", "{CF536416-E1FF-4514-A05C-1473BBAF51C9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{6CBB271F-3ED4-49D8-BAD9-049DAA95CD05}"
 EndProject

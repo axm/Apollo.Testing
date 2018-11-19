@@ -1,4 +1,4 @@
-﻿namespace Apollo.Testing
+﻿namespace Axm.Apollo.Testing
 {
     /// <summary>
     /// Can be used for static classes etc.

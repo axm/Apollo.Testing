@@ -2,7 +2,7 @@
 using Moq;
 using Moq.AutoMock;
 
-namespace Apollo.Testing.Extensions
+namespace Axm.Apollo.Testing.Extensions
 {
     public static class TestExtensions
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Apollo.Testing
+namespace Axm.Apollo.Testing
 {
     public abstract class TestFixture<T> : BaseTestFixture where T : class
     {
