@@ -7,7 +7,7 @@ namespace Axm.Apollo.Testing
 {
     public abstract class BaseTestFixture
     {
-        protected ServiceProvider Services { get; private set; }
+        protected IServiceProvider Services { get; private set; }
         protected AutoMocker AutoMocker { get; } = new AutoMocker();
 
         public BaseTestFixture()
@@ -21,7 +21,7 @@ namespace Axm.Apollo.Testing
             RegisterCoreServices(services);
             RegisterServices(services);
 
-            Services = services.BuildServiceProvider();
+            Services = ResolveServiceProvider(services);
         }
 
         private void RegisterCoreServices(IServiceCollection services)
@@ -30,6 +30,8 @@ namespace Axm.Apollo.Testing
         }
 
         protected virtual void RegisterServices(IServiceCollection services) { }
+
+        protected virtual IServiceProvider ResolveServiceProvider(IServiceCollection services) => services.BuildServiceProvider();
 
         protected Mock<T> GetMock<T>() where T: class => AutoMocker.GetMock<T>();
         protected T GetService<T>() where T : class => Services.GetService<T>();

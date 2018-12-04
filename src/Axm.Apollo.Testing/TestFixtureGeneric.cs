@@ -7,13 +7,7 @@ namespace Axm.Apollo.Testing
     {
         protected T Sut { get; }
 
-        public TestFixture()
-        {
-            if (!typeof(T).IsInterface)
-                throw new InvalidOperationException($"{nameof(T)} must be an interface.");
-
-            Sut = CreateSut();
-        }
+        public TestFixture() => Sut = CreateSut();
 
         protected virtual T CreateSut() => GetService<T>();
     }
