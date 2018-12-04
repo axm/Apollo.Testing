@@ -26,31 +26,4 @@ namespace Axm.Apollo.Testing.Samples.Services
             return Repository.CreateAsync(student);
         }
     }
-
-    public interface IStudentService { Task CreateAsync(Student student); }
-
-    public class Student
-    {
-
-    }
-
-    public class StudentValidation : IStudentValidation
-    {
-        public bool IsValid(Student student) => student != null;
-    }
-
-    public interface IStudentValidation
-    {
-        bool IsValid(Student student);
-    }
-
-    public class StudentRepository : IStudentRepository
-    {
-        public Task CreateAsync(Student student) => Task.CompletedTask;
-    }
-
-    public interface IStudentRepository
-    {
-        Task CreateAsync(Student student);
-    }
 }

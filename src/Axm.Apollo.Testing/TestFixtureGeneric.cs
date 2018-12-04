@@ -9,6 +9,13 @@ namespace Axm.Apollo.Testing
 
         public TestFixture() => Sut = CreateSut();
 
-        protected virtual T CreateSut() => GetService<T>();
+        protected virtual T CreateSut()
+        {
+            if (typeof(T).IsClass)
+                return AutoMocker.CreateInstance<T>();
+
+            // interface
+            return GetService<T>();
+        }
     }
 }
