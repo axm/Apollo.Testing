@@ -11,8 +11,9 @@ namespace Axm.Apollo.Testing
 
         protected virtual T CreateSut()
         {
-            if (typeof(T).IsClass)
-                return AutoMocker.CreateInstance<T>();
+            // not necessary?
+            //if (typeof(T).IsClass)
+            //    return AutoMocker.CreateInstance<T>();
 
             // interface
             return GetService<T>();

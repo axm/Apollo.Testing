@@ -28,8 +28,8 @@ namespace Axm.Apollo.Testing.Samples
         protected override void RegisterServices(IServiceCollection services)
         {
             services.AddScoped<IStudentService, StudentService>();
-            services.WithMock<IStudentValidation>();
-            services.WithMock<IStudentRepository>();
+            services.AddMock<IStudentValidation>();
+            services.AddMock<IStudentRepository>();
         }
     }
 }
